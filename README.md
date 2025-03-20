@@ -2,7 +2,7 @@
 
 # SkyCheck
 
-> Aplicación de escritorio para consultar el clima en tiempo real utilizando la API de WeatherAPI (necesitas una API KEY) y CustomTkinter para la interfaz gráfica.
+> Aplicación de escritorio para consultar el clima en tiempo real utilizando la API de [WeatherAPI](https://www.weatherapi.com) (necesitas una API KEY) y CustomTkinter para la interfaz gráfica.
 
 ## Built With
 
