@@ -34,7 +34,8 @@ def habilitar_entry():
 
 def consultar():
     # -------------------------------- INSERTAR API KEY --------------------------------
-    API_KEY = "<api key acá>"
+    API_KEY = "inserta tu KEY acá"
+    
     CITY = entry.get().strip()
 
     if not CITY:
@@ -120,7 +121,11 @@ def centrar_ventana():
 
 ctk.set_appearance_mode("System")  
 
-imagenes = r"C:\Users\corre\OneDrive\Escritorio\DetectorClima\imagenes"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+imagenes = os.path.join(BASE_DIR, "imagenes")
+temas = os.path.join(BASE_DIR, "temas")
+
 root = ctk.CTk() 
 root.title("SkyCheck")
 root.iconbitmap(os.path.join(imagenes, "LogoClima.ico"))
@@ -129,10 +134,10 @@ root.resizable(False, False)
 
 if is_day():
     logo_path = os.path.join(imagenes, "LogoDia.png")
-    ctk.set_default_color_theme(r"C:\Users\corre\OneDrive\Escritorio\DetectorClima\temas\GhostTrain.json")
+    ctk.set_default_color_theme(os.path.join(temas, "GhostTrain.json"))
 else:
     logo_path = os.path.join(imagenes, "LogoNoche.png")
-    ctk.set_default_color_theme(r"C:\Users\corre\OneDrive\Escritorio\DetectorClima\temas\NightTrain.json")
+    ctk.set_default_color_theme(os.path.join(temas, "NightTrain.json"))
 #GhostTrains - dia
 #NightTrain - noche
 
